@@ -27,8 +27,8 @@ pub export fn update(_: *Plugin) callconv(.c) c_int {
 comptime {
     const startupHook: Plugin.Hook = &startup;
     _ = startupHook;
-    const shutdownHook: Plugin.Hook = &startup;
+    const shutdownHook: Plugin.Hook = &shutdown;
     _ = shutdownHook;
-    const updateHook: Plugin.Hook = &startup;
+    const updateHook: Plugin.Hook = &update;
     _ = updateHook;
 }
